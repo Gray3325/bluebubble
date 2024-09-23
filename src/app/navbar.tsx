@@ -14,6 +14,7 @@ export default function NavBar(params) {
       <a href=''>
         <i className='fi fi-rr-shopping-cart'></i>
       </a>
+      <a href=''>Login</a>
     </nav>
   );
 }
