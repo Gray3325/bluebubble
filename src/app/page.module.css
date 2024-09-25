@@ -24,7 +24,6 @@ color: #FFFFFF;
 
 
 
-
 .page {
   --gray-rgb: 0, 0, 0;
   --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
@@ -56,6 +55,7 @@ color: #FFFFFF;
   flex-direction: column;
   gap: 32px;
   grid-row-start: 2;
+  height: calc(100vh - 5em);
 }
 
 .main ol {
