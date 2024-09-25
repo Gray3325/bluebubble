@@ -4,21 +4,23 @@ import "slick-carousel/slick/slick-theme.css";
 import dates from "./slickDate.json";
 import React from "react";
 import Slider from "react-slick";
+// 這個套件只能把css樣式寫在裡面，不能用class因為會被原本套件的樣式蓋掉
 
 function SimpleSlider() {
   const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1
+    dots: true,         //顯示下面的點
+    infinite: true,     //循環
+    speed: 500,         //滾動速度
+    slidesToShow: 1,    //一次會看到幾張
+    slidesToScroll: 1,  //一次滾動幾張
+    autoplay: true      //自動輪播
   };
   return (
     <div className="slider-container">
-      <Slider {...settings} style={{width:"20em",hight:"10em"}}>
+      <Slider {...settings} style={{hight:"10em"}}>
       {dates.map((date) => (
-          <div key={date.id} style={{background:"#000"}}>
-            <img src={date.url} alt="" />
+          <div key={date.id}>
+            <img src={date.url} alt="" style={{maxWidth:"70%",maxHeight:"30em"}}/>
           </div>
         ))}
       </Slider>
