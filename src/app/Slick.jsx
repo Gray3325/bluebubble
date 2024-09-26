@@ -8,22 +8,28 @@ import Slider from "react-slick";
 
 function SimpleSlider() {
   const settings = {
-    dots: true,         //顯示下面的點
-    infinite: true,     //循環
-    speed: 500,         //滾動速度
-    slidesToShow: 1,    //一次會看到幾張
-    slidesToScroll: 1,  //一次滾動幾張
-    autoplay: true      //自動輪播
+    dots: true, //顯示下面的點
+    infinite: true, //循環
+    speed: 500, //滾動速度
+    slidesToShow: 1, //一次會看到幾張
+    slidesToScroll: 1, //一次滾動幾張
+    autoplay: true, //自動輪播
   };
   return (
-    <div className="slider-container">
-      <Slider {...settings} style={{hight:"10em"}}>
-      {dates.map((date) => (
-          <div key={date.id}>
-            <img src={date.url} alt="" style={{maxWidth:"70%",maxHeight:"30em"}}/>
-          </div>
-        ))}
-      </Slider>
+    <div style={{ width: "50%", background: "#000" }}>
+      <div className='slider-container'>
+        <Slider {...settings} style={{ hight: "10em" }}>
+          {dates.map((date) => (
+            <div key={date.id}>
+              <img
+                src={date.url}
+                alt={date.alt}
+                style={{ maxWidth: "70%", maxHeight: "30em" ,margin: "auto",  display: "block" }}
+              />
+            </div>
+          ))}
+        </Slider>
+      </div>
     </div>
   );
 }

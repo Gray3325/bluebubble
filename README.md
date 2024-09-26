@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 Uicons by [Flaticon](https://www.flaticon.com/uicons)
+use [React Slick](https://react-slick.neostack.com/)
+
 
 ## Getting Started
 
