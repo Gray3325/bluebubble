@@ -9,7 +9,7 @@ import Footer from "./footer";
 export default function Home() {
   return (
     <div className={styles.page}>
-      <NavBar title='BULEBUBBLE' navClass={styles.navbar} />
+      <NavBar title='BLUEBUBBLE' navClass={styles.navbar} />
       <main className={styles.main}>
         <Slick />
         <div className={styles.FeaturedBlock}>
