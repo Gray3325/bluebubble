@@ -4,6 +4,7 @@ import styles from "./page.module.css";
 import Slick from "./newsSlick";
 import Featured from "./Featured_block";
 import RandomItems from "./randomSlick";
+import Footer from "./footer"; 
 
 export default function Home() {
   return (
@@ -35,6 +36,7 @@ export default function Home() {
           />
         </div>
         <RandomItems />
+        <Footer/>
       </main>
     </div>
   );
