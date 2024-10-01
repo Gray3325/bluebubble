@@ -3,7 +3,6 @@ import NavBar from "./navbar";
 import styles from "./page.module.css";
 import Slick from "./newsSlick";
 import Featured from "./Featured_block";
-// import RandomItems from "./randomItems";
 import RandomItems from "./randomSlick";
 
 export default function Home() {
@@ -15,38 +14,28 @@ export default function Home() {
         <div className={styles.FeaturedBlock}>
           <Featured
             css={styles.FeaturedCss}
-            imgSrc=''
             imgAlt='illustration'
-            imgCss=''
-            h5Css=''
+            imgSrc='https://ih1.redbubble.net/image.5164288910.8373/ur,throw_pillow_couch_small,wide_portrait,600x600.jpg'
             h5Text='Diverse products'
-            textCss=''
             textText='There is a diverse range of products to choose from, ranging from clothing to stationery, tableware, and even phone cases.'
           />
           <Featured
             css={styles.FeaturedCss}
-            imgSrc=''
+            imgSrc='https://ih1.redbubble.net/image.5164288910.8373/ur,throw_pillow_couch_small,wide_portrait,600x600.jpg'
             imgAlt='illustration'
-            imgCss=''
-            h5Css=''
             h5Text='Customized printing'
-            textCss=''
             textText='We offer a service where you can choose your preferred designs to be printed into finished products.'
           />
           <Featured
             css={styles.FeaturedCss}
-            imgSrc=''
+            imgSrc='https://ih1.redbubble.net/image.5164288910.8373/ur,throw_pillow_couch_small,wide_portrait,600x600.jpg'
             imgAlt='illustration'
-            imgCss=''
-            h5Css=''
             h5Text='Creator Store'
-            textCss=''
             textText='We also offer a creator store service, where you can have your own artwork printed into finished products for sale.'
           />
         </div>
-        <RandomItems />  
+        <RandomItems />
       </main>
-      <footer className={styles.footer}></footer>
     </div>
   );
 }

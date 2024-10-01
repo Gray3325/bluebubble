@@ -12,7 +12,7 @@ function SampleNextArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block" }}
+      style={{ ...style, display: "none" }}
       onClick={onClick}
     />
   );
@@ -23,7 +23,7 @@ function SamplePrevArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", position: "absolute" }}
+      style={{ ...style, display: "none", position: "absolute" }}
       onClick={onClick}
     />
   );
@@ -46,7 +46,7 @@ function SimpleSlider() {
     },
   };
   return (
-    <div style={{ width: "100%", background: "#ffffff" }}>
+    <div style={{ width: "100%", background: "#ffffff",marginBottom:"5em" }}>
       <div className='slider-container'>
         <Slider {...settings} style={{ hight: "10em", position: "relative" }}>
           {dates.map((date) => (
@@ -60,6 +60,7 @@ function SimpleSlider() {
                     height: "10em",
                     margin: "auto",
                     display: "block",
+                    borderRadius:"1em"
                   }}
                 />
                 <div
