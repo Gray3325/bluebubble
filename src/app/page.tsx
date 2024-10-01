@@ -1,8 +1,10 @@
 "use client"; //新增這行才能使用套件
 import NavBar from "./navbar";
 import styles from "./page.module.css";
-import Slick from "./Slick";
+import Slick from "./newsSlick";
 import Featured from "./Featured_block";
+// import RandomItems from "./randomItems";
+import RandomItems from "./randomSlick";
 
 export default function Home() {
   return (
@@ -10,7 +12,7 @@ export default function Home() {
       <NavBar title='BULEBUBBLE' navClass={styles.navbar} />
       <main className={styles.main}>
         <Slick />
-        <div>
+        <div className={styles.FeaturedBlock}>
           <Featured
             css={styles.FeaturedCss}
             imgSrc=''
@@ -42,7 +44,7 @@ export default function Home() {
             textText='We also offer a creator store service, where you can have your own artwork printed into finished products for sale.'
           />
         </div>
-        
+        <RandomItems />  
       </main>
       <footer className={styles.footer}></footer>
     </div>

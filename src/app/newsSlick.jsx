@@ -16,7 +16,7 @@ function SimpleSlider() {
     autoplay: true, //自動輪播
   };
   return (
-    <div style={{ width: "50%", background: "#000" }}>
+    <div style={{ width: "100%", background: "#ffffff" }}>
       <div className='slider-container'>
         <Slider {...settings} style={{ hight: "10em" }}>
           {dates.map((date) => (
