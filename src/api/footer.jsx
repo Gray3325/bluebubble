@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./page.module.css";
+import style from "../app/page.module.css";
 export default function Footer() {
   return (
     
@@ -15,7 +15,7 @@ export default function Footer() {
       <h2><a href="">About Us</a></h2>
       <h2><a href="">Privacy Policy</a></h2>
       <h2><a href="">Payment</a></h2>
-    <h6>© BULEBUBBLE. All Rights Reserved</h6>
+    <h6>© BLUEBUBBLE. All Rights Reserved</h6>
 
     </div>
     

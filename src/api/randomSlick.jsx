@@ -1,7 +1,7 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import dates from "./slickRandomData.json";
+import dates from "../app/slickRandomData.json";
 import React from "react";
 import Slider from "react-slick";
 // 這個套件只能把css樣式寫在裡面，不能用class因為會被原本套件的樣式蓋掉
@@ -100,6 +100,7 @@ function SimpleSlider() {
                     top: "0.86em",
                     right: "3.32em",
                   }}
+                  id={date.id}
                 ></i>
               </div>
             </div>
