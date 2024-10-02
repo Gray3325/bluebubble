@@ -46,23 +46,25 @@ function SimpleSlider() {
     },
   };
   return (
-    <div style={{ width: "100%", background: "#ffffff",marginBottom:"5em" }}>
+    <div style={{ width: "100%", background: "#ffffff", marginBottom: "5em" }}>
       <div className='slider-container'>
         <Slider {...settings} style={{ hight: "10em", position: "relative" }}>
           {dates.map((date) => (
             <div key={date.id}>
               <div style={{ position: "relative" }}>
-                <img
-                  src={date.url}
-                  alt={date.alt}
-                  style={{
-                    width: "10em",
-                    height: "10em",
-                    margin: "auto",
-                    display: "block",
-                    borderRadius:"1em"
-                  }}
-                />
+                <a href={date.href}>
+                  <img
+                    src={date.url}
+                    alt={date.alt}
+                    style={{
+                      width: "10em",
+                      height: "10em",
+                      margin: "auto",
+                      display: "block",
+                      borderRadius: "1em",
+                    }}
+                  />
+                </a>
                 <div
                   style={{
                     display: "flex",

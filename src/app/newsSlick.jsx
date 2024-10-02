@@ -7,6 +7,7 @@ import Slider from "react-slick";
 // 這個套件只能把css樣式寫在裡面，不能用class因為會被原本套件的樣式蓋掉
 
 // 自訂箭頭樣式
+
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
@@ -28,6 +29,8 @@ function SamplePrevArrow(props) {
     />
   );
 }
+
+// 主要設定
 
 function SimpleSlider() {
   const settings = {

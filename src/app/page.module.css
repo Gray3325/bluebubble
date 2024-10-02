@@ -1,15 +1,19 @@
 @import url("https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css");
 @import url("https://fonts.googleapis.com/css2?family=Julee&display=swap");
 
+/* -------------------導覽列------------------ */
 .navbar {
   background: #83d9d0;
   color: white;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 3em;
+  position: fixed;
+  top: 0;
+  z-index: 10;
 }
 .navbar a {
   font-size: 2em;
@@ -20,7 +24,7 @@
   font-size: 4em;
   color: #ffffff;
 }
-
+/* ----------------頁面設定--------------------- */
 .page {
   --gray-rgb: 0, 0, 0;
   --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
@@ -35,25 +39,16 @@
   font-family: "Julee";
 }
 
-@media (prefers-color-scheme: dark) {
-  .page {
-    --gray-rgb: 255, 255, 255;
-    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
-    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-  }
-}
-
+/* -----------------頁面內容-------------------- */
 .main {
   display: flex;
   flex-direction: column;
   gap: 32px;
   grid-row-start: 2;
-  height: calc(100vh - 5em);
+  margin-top: 5em;
+  /* height: calc(100vh + 5em); */
 }
-/* 特色區塊的樣式 */
+/* -------------------特色區塊------------------ */
 .FeaturedBlock{
   display: flex;
 }
@@ -63,6 +58,28 @@
   flex-direction: column;
   align-items: center;
   margin: 3em;
+}
+
+
+/* ---------------------頁尾------------------- */
+.footer{
+  background:#83d9d0 ;
+  width:100%;
+  display: flex;
+  color:#ffffff;
+  justify-content: space-around;
+  padding-top: 3em;
+  padding-bottom: 5em;
+  position: relative;
+}
+.footerProducts{
+display: flex;
+flex-direction: column;
+gap:1em;  /* 中間空隙 */
+}
+.footer h6{
+position: absolute;
+bottom: 1em;
 }
 
 /* Enable hover only on non-touch devices */
