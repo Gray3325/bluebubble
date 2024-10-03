@@ -1,23 +1,23 @@
-import Link from "next/link";
-
-// 'use server'
+import { useRouter } from 'next/navigation'
 export default function NavBar(params) {
+  const router = useRouter();
+
   return (
     <nav className={params.navClass}>
-      <a href=''>{params.title}</a>
-      <a href=''>News</a>
-      <a href=''>About Us</a>
-      <Link href="/products">Products</Link>
-      <a href=''>
+      <button type="button" onClick={() => router.push('/')}>{params.title}</button>
+      <button type="button">News</button>
+      <button type="button" onClick={() => router.push('/about')}>About Us</button>
+      <button type="button" onClick={() => router.push('/products')}>Products</button>
+      <button type="button">
         <i className='fi fi-rr-search'></i>
-      </a>
-      <a href=''>
+      </button>
+      <button type="button">
         <i className='fi fi-rr-heart'></i>
-      </a>
-      <a href=''>
+      </button>
+      <button type="button">
         <i className='fi fi-rr-shopping-cart'></i>
-      </a>
-      <a href=''>Login</a>
+      </button>
+      <button type="button">Login</button>
     </nav>
   );
 }

@@ -14,12 +14,20 @@
   position: fixed;
   top: 0;
   z-index: 10;
+  font-family: "Julee";
+
 }
-.navbar a {
+
+.navbar button{
   font-size: 2em;
+  font-family: "Julee";
+  border: 0;
+  background-color: #83d9d0;
+  color: #ffffff;
+  cursor: pointer;
 }
 /* 第一個<a> */
-.navbar a:nth-child(1) {
+.navbar button:nth-child(1) {
   /* BLUEBUBBLE */
   font-size: 4em;
   color: #ffffff;

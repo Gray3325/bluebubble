@@ -52,7 +52,7 @@ function SimpleSlider() {
   return (
     <div style={{ width: "100%", background: "#ffffff", margin: "2em 0" }}>
       <div className='slider-container'>
-        <Slider {...settings} style={{ hight: "10em" }}>
+        <Slider {...settings} style={{ hight: "10em" ,position:"relative" }}>
           {dates.map((date) => (
             <div key={date.id}>
               <img

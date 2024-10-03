@@ -1,10 +1,11 @@
 "use client"; //新增這行才能使用套件
-import NavBar from "../api/navbar";
-import styles from "./page.module.css";
-import Slick from "../api/newsSlick";
-import Featured from "../api/Featured_block";
-import RandomItems from "../api/randomSlick";
-import Footer from "../api/footer"; 
+import NavBar from "../../api/navbar";
+import styles from "../page.module.css";
+import Slick from "../../api/newsSlick";
+import Featured from "../../api/Featured_block";
+import RandomItems from "../../api/randomSlick";
+import Footer from "../../api/footer"; 
+
 export default function Home() {
   return (
     <div className={styles.page}>
