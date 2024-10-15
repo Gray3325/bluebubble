@@ -4,7 +4,7 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import 'bootstrap/dist/css/bootstrap.min.css'; //要加這行才會有bootstrap的樣式
 
 
-export default function DropdownMenu() {
+export default function BootstrapDropdownMenu() {
     
   return (
     <>
