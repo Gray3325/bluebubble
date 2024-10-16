@@ -7,7 +7,7 @@ import styles from "../page.module.css";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import SelectComponent from "./selectComponent";
+import Select from "./selectComponent";
 
 export default function Products() {
     
@@ -19,7 +19,7 @@ export default function Products() {
         <Container>
           <Row>
             <Col>
-              <SelectComponent />
+              <Select />
             </Col>
             <Col xs={8}>2 of 3 (wider)</Col>
             <Col>3 of 3</Col>

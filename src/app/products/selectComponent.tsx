@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useState } from "react";
 import chroma from "chroma-js";
 
 import { ColourOption, colourOptions } from "./productData";
@@ -58,14 +59,17 @@ const colourStyles: StylesConfig<ColourOption, true> = {
 };
 
 export default function SelectComponent() {
-  return (
+  const id = Date.now().toString(); //需要設定才能運作
+  const [isMounted, setIsMounted] = useState(false); //需要先設定isMounted狀態
+  useEffect(() => setIsMounted(true), []); //要先讓值變成ture才能讓底下的程式碼正常運作
+  return  isMounted ? ( //先確認isMounted狀態，如果出錯就不顯示
     <Select
       closeMenuOnSelect={false}
-      // defaultValue={[colourOptions[0], colourOptions[1]]}
       isMulti //是否多選
       options={colourOptions}
       styles={colourStyles}
-      placeholder="choose..."
+      placeholder='choose...'
+      id={id} //需要設定才能運作
     />
-  );
+  ): null;
 }
