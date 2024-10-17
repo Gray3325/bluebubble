@@ -2,9 +2,8 @@
 
 import NavBar from "../../api/navbar";
 import styles from "../page.module.css";
-
-// import DropdownMenu from "./dropdown";
-import Select from "./select-react";
+import Select from "./select-material";
+import TextField from "./textField-material";
 
 export default function Products() {
   return (
@@ -13,10 +12,12 @@ export default function Products() {
       <div className={styles.product}></div>
       <div className={styles.main}>
         <div className={styles.searchBar}>
-          <div className={styles.selectComponent}>
+          
+            {/* 放下拉選單的地方 */}
             <Select />
-          </div>
-          <input></input>
+          
+          {/* 放搜尋欄位 */}
+          <TextField />
         </div>
       </div>
     </div>
