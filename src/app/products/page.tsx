@@ -5,6 +5,7 @@ import styles from "../page.module.css";
 import Select from "./select-material";
 import TextField from "./textField-material";
 import SingleCard from "./card-material";
+// import Rabbit from "../image/moonRabbit.jpg";
 
 export default function Products() {
   return (
