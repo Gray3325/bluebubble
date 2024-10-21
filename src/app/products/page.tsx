@@ -4,6 +4,7 @@ import NavBar from "../../api/navbar";
 import styles from "../page.module.css";
 import Select from "./select-material";
 import TextField from "./textField-material";
+import SingleCard from "./card-material";
 
 export default function Products() {
   return (
@@ -12,12 +13,15 @@ export default function Products() {
       <div className={styles.product}></div>
       <div className={styles.main}>
         <div className={styles.searchBar}>
-          
-            {/* 放下拉選單的地方 */}
-            <Select />
-          
+          {/* 放下拉選單的地方 */}
+          <Select />
+
           {/* 放搜尋欄位 */}
           <TextField />
+        </div>
+        <div> 
+        {/* 放卡片的地方 */}
+        <SingleCard />
         </div>
       </div>
     </div>
