@@ -1,6 +1,16 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 Uicons by [Flaticon](https://www.flaticon.com/uicons)
-use [React Slick](https://react-slick.neostack.com/)
+use [React Slick](https://react-slick.neostack.com/)、[material.ui](https://mui.com/)
+
+## Web page screenshot
+首頁
+![FireShot Capture 013 - BLUEBUBBLE - localhost](https://hackmd.io/_uploads/SJ0YFkHxkl.png)
+
+關於頁面
+![FireShot Capture 012 - BLUEBUBBLE - localhost](https://hackmd.io/_uploads/Hy2Iq1SxJg.png)
+
+商品搜尋頁面
+![FireShot Capture 014 - BLUEBUBBLE - localhost](https://hackmd.io/_uploads/ByFcq1Blyl.png)
 
 
 ## Getting Started
