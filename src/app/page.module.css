@@ -112,20 +112,25 @@
 .aboutSubB div:nth-child(3) {
   flex-direction: column;
 }
-.bigStyles{
+.bigStyles {
   font-size: 2em;
 }
 /* -------------------搜尋產品頁面--------------------- */
-.product{
+.product {
   margin-top: 8em;
 }
-.searchBar{
+.searchBar {
   display: flex;
   align-items: center;
 }
-
+.manyCards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3em;
+}
 /* ---------------------------------------- */
 /* ---------------------------------------- */
 /* ---------------------------------------- */
 /* ---------------------------------------- */
-

@@ -20,8 +20,16 @@ export default function Products() {
           {/* 放搜尋欄位 */}
           <TextField />
         </div>
-        <div> 
+        <div className={styles.manyCards}> 
         {/* 放卡片的地方 */}
+        <SingleCard />
+        <SingleCard />
+        <SingleCard />
+        <SingleCard />
+        <SingleCard />
+        <SingleCard />
+        <SingleCard />
+        <SingleCard />
         <SingleCard />
         </div>
       </div>
