@@ -19,11 +19,11 @@ export default function MultiActionAreaCard() {
           position: "absolute",
           right: "1em",
           top: "1em",
-          zIndex: 10,
+          zIndex: 5,
           border: 0,
           borderRadius: "10em",
           background: "#ffffff",
-          boxShadow: "0px 0px 0 2px #000000 ",
+          // boxShadow: "0px 0px 0 2px #000000 ",
           width: "3em",
           height: "3em",
           display: "flex",
@@ -41,14 +41,14 @@ export default function MultiActionAreaCard() {
           src='https://ih1.redbubble.net/image.5263652137.2942/ssrco,active_tshirt,mens,101010:01c5ca27c6,front,square_three_quarter,1000x1000.jpg' 
           alt='rabbit on moon'
         />
-        <CardContent>
-          <Typography gutterBottom variant='h5' component='div'>
-            Happiness Magic Array
+        <CardContent >
+          <Typography gutterBottom variant='h5' component='div' sx={{fontFamily: "Julee"}}>
+          Moon Rabbit Active T-Shirt
           </Typography>
-          <Typography variant='body2' sx={{ color: "text.secondary" }}>
+          <Typography variant='body2' sx={{ color: "text.secondary",fontFamily: "Julee" }}>
             $12.65
           </Typography>
-          <Typography variant='body3' sx={{ color: "text.secondary" }}>
+          <Typography variant='body3' sx={{ color: "text.secondary",fontFamily: "Julee" }}>
             Graycat
           </Typography>
         </CardContent>

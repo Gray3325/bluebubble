@@ -31,6 +31,9 @@ export default function Products() {
         <SingleCard />
         <SingleCard />
         <SingleCard />
+        <SingleCard />
+        <SingleCard />
+        <SingleCard />
         </div>
       </div>
     </div>

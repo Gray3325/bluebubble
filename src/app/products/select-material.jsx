@@ -55,7 +55,7 @@ export default function MultipleSelectChip() {
   };
   //   console.log({personName}); //確認有正確抓到值
   return (
-    <div>
+    <>
       <FormControl sx={{ m: 1, width: 500 }}>
         <InputLabel id='demo-multiple-chip-label' sx={{fontFamily: "Julee",color:"#4AAEA4",}}>Products</InputLabel>
         <Select
@@ -85,6 +85,6 @@ export default function MultipleSelectChip() {
           ))}
         </Select>
       </FormControl>
-    </div>
+    </>
   );
 }
