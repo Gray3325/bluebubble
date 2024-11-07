@@ -1,16 +1,16 @@
 "use client"; //新增這行才能使用套件
 import NavBar from "../api/navbar";
 import styles from "./page.module.css";
-import Slick from "../api/newsSlick";
+import Carousel from "../api/carousel"
 import Featured from "../api/Featured_block";
-import RandomItems from "../api/randomSlick";
+import ImageSlider from "../api/imageSlider";
 import Footer from "../api/footer"; 
 export default function Home() {
   return (
     <div className={styles.page}>
       <NavBar title='BLUEBUBBLE' navClass={styles.navbar} />
       <main className={styles.main}>
-        <Slick />
+        <Carousel/>
         <div className={styles.FeaturedBlock}>
           <Featured
             css={styles.FeaturedCss}
@@ -34,7 +34,7 @@ export default function Home() {
             textText='We also offer a creator store service, where you can have your own artwork printed into finished products for sale.'
           />
         </div>
-        <RandomItems />
+        <ImageSlider/>
         <Footer/>
       </main>
     </div>
