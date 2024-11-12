@@ -8,7 +8,7 @@ import Footer from "../api/footer";
 export default function Home() {
   return (
     <div className={styles.page}>
-      <NavBar title='BLUEBUBBLE' navClass={styles.navbar} />
+      <NavBar/>
       <main className={styles.main}>
         <Carousel/>
         <div className={styles.FeaturedBlock}>

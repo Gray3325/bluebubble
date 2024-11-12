@@ -1,10 +1,11 @@
 import { useRouter } from 'next/navigation'
-export default function NavBar(params) {
+import styles from "./NavBar.module.css"
+export default function NavBar() {
   const router = useRouter();
 
   return (
-    <nav className={params.navClass}>
-      <button type="button" onClick={() => router.push('/')}>{params.title}</button>
+    <nav className={styles.navbar}>
+      <button type="button" onClick={() => router.push('/')}>BLUEBUBBLE</button>
       <button type="button">News</button>
       <button type="button" onClick={() => router.push('/about')}>About Us</button>
       <button type="button" onClick={() => router.push('/products')}>Products</button>
