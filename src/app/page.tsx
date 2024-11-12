@@ -3,7 +3,7 @@ import NavBar from "../api/navbar";
 import styles from "./page.module.css";
 import Carousel from "../api/carousel"
 import Featured from "../api/Featured_block";
-import ImageSlider from "../api/imageSlider";
+import MultiImageCarousel from "../api/MultiImageCarousel";
 import Footer from "../api/footer"; 
 export default function Home() {
   return (
@@ -34,7 +34,7 @@ export default function Home() {
             textText='We also offer a creator store service, where you can have your own artwork printed into finished products for sale.'
           />
         </div>
-        <ImageSlider/>
+        <MultiImageCarousel/>
         <Footer/>
       </main>
     </div>

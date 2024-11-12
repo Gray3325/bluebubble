@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import styles from "../app/page.module.css";
+import styles from "./Carousel.module.css";
 
 
 // 圖片輪播的元件
-function ImageCarousel() {
+function Carousel() {
   // 設定圖片URL陣列
   const images = [
     "https://images.plurk.com/IUByFzIASsiz7XOjcBuyJ.png",
@@ -64,4 +64,4 @@ function ImageCarousel() {
   );
 }
 
-export default ImageCarousel;
+export default Carousel;
