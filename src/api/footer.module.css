@@ -1,0 +1,19 @@
+.footer {
+  background: #83d9d0;
+  width: 100%;
+  display: flex;
+  color: #ffffff;
+  justify-content: space-around;
+  padding-top: 3em;
+  padding-bottom: 5em;
+  position: relative;
+}
+.footerProducts {
+  display: flex;
+  flex-direction: column;
+  gap: 1em; /* 中間空隙 */
+}
+.footer h6 {
+  position: absolute;
+  bottom: 1em;
+}

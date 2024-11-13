@@ -1,16 +1,16 @@
 "use client"; //新增這行才能使用套件
 import NavBar from "../../api/navbar";
-import styles from "../page.module.css";
+import styles from "./page.module.css";
 import Footer from "../../api/footer";
 import Image from 'next/image'
 import Redbubble from "../image/redbubble.png";
 import KUSDOM from "../image/kusdom.png";
 import Web from "../image/web.png";
 
-export default function Home() {
+export default function aboutUs() {
   return (
     <div className={styles.page}>
-      <NavBar title='BLUEBUBBLE' navClass={styles.navbar} />
+      <NavBar />
       <main className={styles.about}>
         <h1>Reference website</h1>
         <div className={styles.aboutSubB}>
