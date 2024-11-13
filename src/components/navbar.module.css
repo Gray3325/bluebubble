@@ -28,8 +28,17 @@
     color: #ffffff;
   }
 /* -------------------手機版------------------ */
-@media (max-width: 425px) {
-  .navbar{
-  
-  }
+.navbarMedia{
+  background: #83d9d0;
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    font-family: "Julee";
 }
