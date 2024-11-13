@@ -1,6 +1,6 @@
 "use client"; //新增這行才能使用套件
 
-import NavBar from "../../api/navbar";
+import NavBar from "../../components/navbar";
 import styles from "./page.module.css";
 import Select from "./select-material";
 import TextField from "./textField-material";

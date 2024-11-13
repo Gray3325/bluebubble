@@ -1,7 +1,7 @@
 "use client"; //新增這行才能使用套件
-import NavBar from "../../api/navbar";
+import NavBar from "../../components/navbar";
 import styles from "./page.module.css";
-import Footer from "../../api/footer";
+import Footer from "../../components/footer";
 import Image from 'next/image'
 import Redbubble from "../image/redbubble.png";
 import KUSDOM from "../image/kusdom.png";

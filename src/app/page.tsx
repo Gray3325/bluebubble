@@ -1,10 +1,10 @@
 "use client"; //新增這行才能使用套件
-import NavBar from "../api/navbar";
+import NavBar from "../components/navbar";
 import styles from "./page.module.css";
-import Carousel from "../api/carousel"
-import Featured from "../api/FeaturedBlock";
-import MultiImageCarousel from "../api/MultiImageCarousel";
-import Footer from "../api/footer"; 
+import Carousel from "../components/carousel"
+import Featured from "../components/FeaturedBlock";
+import MultiImageCarousel from "../components/MultiImageCarousel";
+import Footer from "../components/footer"; 
 export default function Home() {
   return (
     <div className={styles.page}>
