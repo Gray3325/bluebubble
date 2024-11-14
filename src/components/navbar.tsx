@@ -2,7 +2,7 @@
 import * as React from "react";
 import { useRouter } from "next/navigation";
 import styles from "./NavBar.module.css";
-import useWindowSize from "./useWindowSize";
+// import useWindowSize from "./useWindowSize";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -21,13 +21,16 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
+import Button from "@mui/material/Button";
+import LogoutIcon from "../app/image/sign-out-alt.png";
+import Image from "next/image";
 
-const pages = ["News", "AboutUs", "Products", "Favorite"];
+const pages = ["News", "About", "Products", "Favorite", "Cart"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 export default function NavBar() {
   const router = useRouter();
-  const { width } = useWindowSize(); // 只需要取得寬度來決定樣式
+  // const { width } = useWindowSize(); // 只需要取得寬度來決定樣式
   const [state, setState] = React.useState({
     left: false,
   });
@@ -52,10 +55,10 @@ export default function NavBar() {
       <List>
         {pages.map((text, index) => (
           <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
+            <ListItemButton onClick={() => router.push(text.toLowerCase())}>
+              {/* <ListItemIcon>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
+              </ListItemIcon> */}
               <ListItemText primary={text} />
             </ListItemButton>
           </ListItem>
@@ -67,7 +70,7 @@ export default function NavBar() {
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                {index % 2 === 0 ? <MailIcon /> : <Image src={LogoutIcon} width={20} height={20} />}
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>
@@ -76,86 +79,95 @@ export default function NavBar() {
       </List>
     </Box>
   );
+  return (
+    <AppBar position='fixed' sx={{ backgroundColor: "#83d9d0" }}>
+      <Container maxWidth='xl'>
+        <Toolbar disableGutters>
+          <Typography
+            variant='h5'
+            noWrap
+            component='a'
+            onClick={() => router.push("/")}
+            sx={{
+              mr: 2,
+              display: { xs: "none", md: "flex" },
+              fontFamily: "Julee",
+              fontWeight: 700,
+              letterSpacing: ".3rem",
+              color: "inherit",
+              textDecoration: "none",
+              cursor: "pointer", //滑鼠樣式
+            }}
+          >
+            BLUEBUBBLE
+          </Typography>
 
-  if (width > 430) {
-    return (
-      <nav className={styles.navbar}>
-        <button type='button' onClick={() => router.push("/")}>
-          BLUEBUBBLE
-        </button>
-        <button type='button'>News</button>
-        <button type='button' onClick={() => router.push("/about")}>
-          About Us
-        </button>
-        <button type='button' onClick={() => router.push("/products")}>
-          Products
-        </button>
-        <button type='button'>
-          <i className='fi fi-rr-search'></i>
-        </button>
-        <button type='button'>
-          <i className='fi fi-rr-heart'></i>
-        </button>
-        <button type='button'>
-          <i className='fi fi-rr-shopping-cart'></i>
-        </button>
-        <button type='button'>Login</button>
-      </nav>
-    );
-  } else {
-    return (
-      <AppBar position='fixed' sx={{ backgroundColor: "#83d9d0" }}>
-        <Container maxWidth='xl'>
-          <Toolbar disableGutters>
-            <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-              <IconButton
-                size='large'
-                aria-label='account of current user'
-                aria-controls='menu-appbar'
-                aria-haspopup='true'
-                onClick={toggleDrawer("left", true)}
-                color='inherit'
-              >
-                <MenuIcon />
-              </IconButton>
-              <Drawer
-                anchor='left'
-                open={state["left"]}
-                onClose={toggleDrawer("left", false)}
-              >
-                {list("left")}
-              </Drawer>
-            </Box>
-            <Typography
-              variant='h5'
-              noWrap
-              component='a'
-              href='#app-bar-with-responsive-menu'
-              sx={{
-                mr: 2,
-                display: { xs: "flex", md: "none" },
-                flexGrow: 1,
-                fontFamily: "monospace",
-                fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "inherit",
-                textDecoration: "none",
-              }}
+          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+            <IconButton
+              size='large'
+              aria-label='account of current user'
+              aria-controls='menu-appbar'
+              aria-haspopup='true'
+              onClick={toggleDrawer("left", true)}
+              color='inherit'
             >
-              BLUEBUBBLE
-            </Typography>
-
-            <Box sx={{ flexGrow: 0 }}>
-              <Tooltip title=''>
-                <IconButton sx={{ p: 0 }}>
-                  {/* 登入後顯示頭貼 */}
-                  <Avatar alt='Remy Sharp' src='' />
-                </IconButton>
-              </Tooltip>
-            </Box>
-          </Toolbar>
-        </Container>
-      </AppBar>
-    );
-  }
+              <MenuIcon />
+            </IconButton>
+            <Drawer
+              anchor='left'
+              open={state["left"]}
+              onClose={toggleDrawer("left", false)}
+            >
+              {list("left")}
+            </Drawer>
+          </Box>
+          <Typography
+            variant='h5'
+            noWrap
+            component='a'
+            onClick={() => router.push("/")}
+            sx={{
+              mr: 2,
+              display: { xs: "flex", md: "none" },
+              flexGrow: 1,
+              fontFamily: "Julee",
+              fontWeight: 700,
+              letterSpacing: ".3rem",
+              color: "inherit",
+              textDecoration: "none",
+              cursor: "pointer", //滑鼠樣式
+            }}
+          >
+            BLUEBUBBLE
+          </Typography>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "none", md: "flex" },
+              alignItems: "center",
+            }}
+          >
+            {pages.map((page) => (
+              <Button
+                key={page}
+                sx={{ my: 2, color: "white", display: "block" }}
+                // 先轉小寫之後再使用
+                onClick={() => router.push(page.toLowerCase())}
+              >
+                {page}
+              </Button>
+            ))}
+          </Box>
+          <Box sx={{ flexGrow: 0 }}>
+            <Tooltip title='Avatar'>
+              <IconButton sx={{ p: 0 }}>
+                {/* 登入後顯示頭貼 */}
+                <Avatar alt='Remy Sharp' src='' />
+              </IconButton>
+            </Tooltip>
+          </Box>
+        </Toolbar>
+      </Container>
+    </AppBar>
+  );
 }
