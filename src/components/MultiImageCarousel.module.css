@@ -17,6 +17,8 @@
   width: calc(100% / 3 - 4em);
   height: 30vh;
   margin: 0 2em;
+  /* 按圖片比例縮放 */
+  object-fit:contain; 
 }
 
 .carouselButton {
@@ -39,4 +41,14 @@
 .carouselButton.next {
   right: 0em;
   clip-path: polygon(35% 0, 59% 50%, 35% 100%, 0% 100%, 25% 50%, 0% 0%);
+}
+
+/* -----------------手機版樣式------------------- */
+@media (max-width: 450px) {
+  .carousel{
+    justify-content: center;
+  }
+  .carouselImage{
+    width:auto;
+  }
 }

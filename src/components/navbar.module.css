@@ -13,20 +13,7 @@
     font-family: "Julee";
   }
   
-  .navbar button {
-    font-size: 2em;
-    font-family: "Julee";
-    border: 0;
-    background-color: #83d9d0;
-    color: #ffffff;
-    cursor: pointer;
-  }
-  /* 第一個<a> */
-  .navbar button:nth-child(1) {
-    /* BLUEBUBBLE */
-    font-size: 4em;
-    color: #ffffff;
-  }
+ 
 /* -------------------手機版------------------ */
 .navbarMedia{
   background: #83d9d0;

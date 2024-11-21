@@ -1,23 +1,26 @@
 import React from "react";
+import { useRouter } from "next/navigation";
 import style from "./footer.module.css";
-export default function Footer() {
-  return (
-    
-    <div className={style.footer}>
-      <div className={style.footerProducts}>
-        <h2><a href="">Products</a></h2>
-        <h4><a href="">Clothings</a></h4>
-        <h4><a href="">Kitchen supplies</a></h4>
-        <h4><a href="">Housewares</a></h4>
-        <h4><a href="">Stationery</a></h4>
-        <h4><a href="">Cellphone case</a></h4>
-      </div>
-      <h2><a href="">About Us</a></h2>
-      <h2><a href="">Privacy Policy</a></h2>
-      <h2><a href="">Payment</a></h2>
-    <h6>© BLUEBUBBLE. All Rights Reserved</h6>
+const footers = ["Products", "About", "Privacy Policy", "Payment"];
 
+export default function Footer() {
+  const router = useRouter();
+
+  return (
+    <div className={style.footer}>
+      <div className={style.footerButtons}>
+        {footers.map((footer) => (
+          <button
+            key={footer}
+            className={style.footerButton}
+            onClick={() => router.push(footer.replace(/\s/g, "").toLowerCase())}
+            // 把字串中的空白移除並改成全小寫
+          >
+            <h2>{footer}</h2>
+          </button>
+        ))}
+      </div>
+      <h6>© BLUEBUBBLE. All Rights Reserved</h6>
     </div>
-    
   );
 }

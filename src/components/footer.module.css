@@ -4,16 +4,34 @@
   display: flex;
   color: #ffffff;
   justify-content: space-around;
-  padding-top: 3em;
-  padding-bottom: 5em;
+  padding-top: 2em;
+  padding-bottom: 7em;
   position: relative;
 }
-.footerProducts {
+.footerButtons {
   display: flex;
-  flex-direction: column;
-  gap: 1em; /* 中間空隙 */
+  flex-direction: row;
+  gap: 10em; /* 中間空隙 */
+}
+.footerButton{
+border: 0;
+background-color: #83d9d0;
+font-family: 'Julee';
+color: #ffffff;
+cursor: pointer; /*滑鼠樣式*/
 }
 .footer h6 {
   position: absolute;
   bottom: 1em;
+}
+
+/* -----------------手機版樣式------------------- */
+@media (max-width: 450px) {
+  .footer{
+    padding-bottom: 4em;
+  }
+  .footerButtons{
+    flex-direction: column;
+    gap:2em;
+  }
 }

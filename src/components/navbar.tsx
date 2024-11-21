@@ -1,8 +1,7 @@
 // "use client"; //新增這行才能使用套件
 import * as React from "react";
 import { useRouter } from "next/navigation";
-import styles from "./NavBar.module.css";
-// import useWindowSize from "./useWindowSize";
+// import styles from "./NavBar.module.css";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -19,7 +18,6 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import Button from "@mui/material/Button";
 import LogoutIcon from "../app/image/sign-out-alt.png";

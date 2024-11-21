@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import styles from "./MultiImageCarousel.module.css";
+import useWindowSize from "./useWindowSize";
 
 function MultiImageCarousel() {
   // 圖片的 URL 陣列
@@ -16,9 +17,16 @@ function MultiImageCarousel() {
     "https://ih1.redbubble.net/image.5164288861.8373/sn,x1000-pad,1000x1000,f8f8f8.jpg",
     "https://ih1.redbubble.net/image.5164288879.8373/ur,apron_realistic_flatlay,square,1000x1000.jpg",
   ];
+  const { width } = useWindowSize(); // 只需要取得寬度來決定樣式
 
   // 設定可見範圍中顯示的圖片數量
-  const visibleImages = 3;
+  var visibleImages;
+  if (width<450) {
+    visibleImages=1;
+  }else{
+    visibleImages=3;
+  }
+  
 
   // 當前顯示的起始索引
   const [startIndex, setStartIndex] = useState(0);
