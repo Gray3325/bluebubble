@@ -7,10 +7,12 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Chip from "@mui/material/Chip";
+import useWindowSize from "../../components/useWindowSize";
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
-const MenuProps = { //控制子元件的樣式
+const MenuProps = {
+  //控制子元件的樣式
   PaperProps: {
     style: {
       maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
@@ -41,6 +43,7 @@ function getStyles(name, personName, theme) {
 }
 
 export default function MultipleSelectChip() {
+  const { width } = useWindowSize();
   const theme = useTheme();
   const [personName, setPersonName] = React.useState([]);
 
@@ -53,11 +56,21 @@ export default function MultipleSelectChip() {
       typeof value === "string" ? value.split(",") : value
     );
   };
-  //   console.log({personName}); //確認有正確抓到值
+  var FormWidth = 0;
+  if (width < 430) {
+    FormWidth = 300;
+  } else {
+    FormWidth = 500;
+  }
   return (
     <>
-      <FormControl sx={{ m: 1, width: 500 }}>
-        <InputLabel id='demo-multiple-chip-label' sx={{fontFamily: "Julee",color:"#4AAEA4",}}>Products</InputLabel>
+      <FormControl sx={{ m: 1, width: FormWidth }}>
+        <InputLabel
+          id='demo-multiple-chip-label'
+          sx={{ fontFamily: "Julee", color: "#4AAEA4" }}
+        >
+          Products
+        </InputLabel>
         <Select
           labelId='demo-multiple-chip-label'
           id='demo-multiple-chip'

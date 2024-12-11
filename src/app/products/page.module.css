@@ -1,7 +1,3 @@
-@import url("https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css");
-@import url("https://fonts.googleapis.com/css2?family=Julee&display=swap");
-
-/* ----------------頁面設定--------------------- */
 .page {
   --gray-rgb: 0, 0, 0;
   --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
@@ -11,29 +7,37 @@
   --button-secondary-hover: #f2f2f2;
   justify-items: center;
   min-height: 100svh;
-  /* padding: 80px; */
   gap: 64px;
   font-family: "Julee";
 }
-
-/* -----------------頁面內容-------------------- */
 .main {
   display: flex;
   flex-direction: column;
   gap: 32px;
   grid-row-start: 2;
   margin-top: 5em;
-  /* height: calc(100vh + 5em); */
 }
 
-/* -----------------特色區塊-------------------- */
-.FeaturedBlock {
+.product {
+  margin-top: 8em;
+}
+.searchBar {
   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.manyCards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3em;
 }
 
 /* -----------------手機版樣式------------------- */
 @media (max-width: 450px) {
-  .FeaturedBlock {
-    display: block;
+  .searchBar{
+    display: flex;
+    flex-direction: column;
   }
 }

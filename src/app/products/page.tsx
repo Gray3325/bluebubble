@@ -1,16 +1,15 @@
 "use client"; //新增這行才能使用套件
 
-import NavBar from "../../api/navbar";
-import styles from "../page.module.css";
+import NavBar from "../../components/navbar";
+import styles from "./page.module.css";
 import Select from "./select-material";
 import TextField from "./textField-material";
 import SingleCard from "./card-material";
-// import Rabbit from "../image/moonRabbit.jpg";
 
 export default function Products() {
   return (
     <div className={styles.page}>
-      <NavBar title='BLUEBUBBLE' navClass={styles.navbar} />
+      <NavBar  />
       <div className={styles.product}></div>
       <div className={styles.main}>
         <div className={styles.searchBar}>
