@@ -1,7 +1,6 @@
 // "use client"; //新增這行才能使用套件
 import * as React from "react";
 import { useRouter } from "next/navigation";
-// import styles from "./NavBar.module.css";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -28,7 +27,6 @@ const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 export default function NavBar() {
   const router = useRouter();
-  // const { width } = useWindowSize(); // 只需要取得寬度來決定樣式
   const [state, setState] = React.useState({
     left: false,
   });
