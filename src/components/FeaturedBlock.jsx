@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import style from "./FeaturedBlock.module.css"
 import exJpg from "../app/image/ex.jpg";
 
 const featuredDates = [
@@ -28,23 +29,19 @@ const featuredDates = [
 
 export default function Featured() {
   return (
-    <div style={{ display: "flex" }}>
+    <div className={style.FeaturedBlock}>
       {featuredDates.map((featuredDate) => (
         <div
           key={featuredDate}
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            margin: "3em",
-          }}
+          className={style.featuredDate}
+          
         >
           <Image
             width={500}
             height={500}
             src={exJpg}
             alt={featuredDate.imgAlt}
-            style={{width:"15em",height:"15em",borderRadius:"1em"}}
+            className={style.imgCss}
           />
           <h3>{featuredDate.title}</h3>
           <p>{featuredDate.depiction}</p>

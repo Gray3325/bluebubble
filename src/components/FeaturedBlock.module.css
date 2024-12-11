@@ -1,0 +1,22 @@
+.FeaturedBlock{
+display: flex;
+}
+
+.featuredDate{
+display: flex;
+flex-direction: column;
+align-items: center;
+margin: 3em;
+}
+.imgCss{
+width: 15em;
+height: 15em;
+border-radius: 1em;
+}
+/* -----------------手機版樣式------------------- */
+@media (max-width: 450px) {
+.FeaturedBlock{
+    flex-direction: column;
+
+}
+}
