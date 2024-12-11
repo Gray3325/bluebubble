@@ -3,15 +3,17 @@ Uicons by [Flaticon](https://www.flaticon.com/uicons)
 use [React Slick](https://react-slick.neostack.com/)、[material.ui](https://mui.com/)
 
 ## Web page screenshot
-首頁
-![FireShot Capture 013 - BLUEBUBBLE - localhost](https://images.plurk.com/1n26jUrZktizH9WgErZ2j0.png)
+### 首頁
+![網頁版首頁](https://images.plurk.com/4yqo2BsqjWnsoQbNA6Zuwz.png)
+![手機版首頁](https://images.plurk.com/20hsepxoLrvTZIdd9c0n17.png)
 
-關於頁面
-![FireShot Capture 012 - BLUEBUBBLE - localhost](https://images.plurk.com/3HDe9zrOGslD4thyTxUfua.png)
+### 關於頁面
+![網頁版關於頁面](https://images.plurk.com/5Krdgx1fzNexIglUPXvINO.png)
+![手機版關於頁面](https://images.plurk.com/pQp7dKMG9W34l1ycF6cQO.png)
 
-商品搜尋頁面
-![FireShot Capture 014 - BLUEBUBBLE - localhost](https://images.plurk.com/5CZ1kcHDVoGKKH9hy8TYR2.png)
-
+### 商品搜尋頁面
+![網頁版商品搜尋頁面](https://images.plurk.com/2V6cNalPfTgmKaxPsdRSrb.png)
+![手機版商品搜尋頁面](https://images.plurk.com/3PqN7JlxOYbJsjhGJRDg8J.png)
 
 ## Getting Started
 
